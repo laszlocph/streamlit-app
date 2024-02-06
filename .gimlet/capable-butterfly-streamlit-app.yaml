@@ -6,13 +6,17 @@ chart:
   name: onechart
   version: 0.63.0
 values:
-  containerPort: 80
+  containerPort: 8501
   gitRepository: YoucefGuichi/streamlit-app
   gitSha: '{{ .SHA }}'
   image:
     dockerfile: Dockerfile
     repository: 127.0.0.1:32447/{{ .APP }}
     tag: '{{ .SHA }}'
+  podAnnotations: {}
+  podDisruptionBudgetEnabled: true
+  podLabels: {}
   replicas: 1
   resources:
     ignoreLimits: true
+  spreadAcrossNodes: true
