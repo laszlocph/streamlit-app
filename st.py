@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-st.write("HEY GERIIIII !")
+st.write("HEY!")
 
 chart_data = pd.DataFrame(
      np.random.randn(20, 3),
