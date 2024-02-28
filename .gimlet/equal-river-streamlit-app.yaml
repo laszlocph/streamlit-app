@@ -17,3 +17,5 @@ values:
   replicas: 1
   resources:
     ignoreLimits: true
+  vars:
+    MYVAR: Hello Budapest!
