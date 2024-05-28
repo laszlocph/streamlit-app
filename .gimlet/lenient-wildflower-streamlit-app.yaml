@@ -19,7 +19,7 @@ values:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
       kubernetes.io/ingress.class: nginx
-    host: laszlocph-streamlit-app-hacking-you.gimlet.app
+    host: laszlocph-streamlit-app2-ymimdvfu.gimlet.app
     tlsEnabled: true
   replicas: 1
   resources:
