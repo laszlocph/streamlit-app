@@ -21,10 +21,8 @@ values:
       kubernetes.io/ingress.class: nginx
     host: laszlocph-streamlit-app-tmksdyuj.gimlet.app
     nginxBasicAuth:
-      password: ""
-      user: ""
+      password: asdf
+      user: laszlo
     tlsEnabled: true
-  replicas: 1
   resources:
     ignoreLimits: true
-  vars: {}
