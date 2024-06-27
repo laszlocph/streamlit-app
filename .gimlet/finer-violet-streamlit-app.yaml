@@ -20,10 +20,6 @@ values:
       cert-manager.io/cluster-issuer: letsencrypt
       kubernetes.io/ingress.class: nginx
     host: laszlocph-streamlit-app-tgawezjq.gimlet.app
-    nginxBasicAuth:
-      password: ""
-      user: ""
-    protectWithOauthProxy: false
     tlsEnabled: true
   resources:
     ignoreLimits: true
