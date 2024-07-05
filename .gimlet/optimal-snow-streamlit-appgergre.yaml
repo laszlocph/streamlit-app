@@ -1,0 +1,23 @@
+app: streamlit-appgergre
+env: optimal-snow
+namespace: default
+chart:
+  name: https://github.com/gimlet-io/onechart.git?branch=simplified-schema&path=/charts/onechart/
+values:
+  gitRepository: laszlocph/streamlit-app
+  gitSha: '{{ .SHA }}'
+  image:
+    dockerfile: ""
+    registry: ""
+    strategy: static
+    tag: "1.25"
+  imagePullSecrets:
+    - '{{ .APP }}--pullsecret'
+  ingress:
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt
+      kubernetes.io/ingress.class: nginx
+    host: laszlocph-streamlit-app.alma.hu
+    tlsEnabled: true
+  resources:
+    ignoreLimits: true
