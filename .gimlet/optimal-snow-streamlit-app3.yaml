@@ -21,7 +21,7 @@ values:
       kubernetes.io/ingress.class: nginx
       nginx.ingress.kubernetes.io/auth-signin: https://auth.alma.hu/oauth2/start?rd=/redirect/$http_host$escaped_request_uri
       nginx.ingress.kubernetes.io/auth-url: https://auth.alma.hu/oauth2/auth
-    host: laszlocph-streamlit-app-d72c4d51.gimlet.app
+    host: laszlocph-strea1mlit-app-d72c4d51.gimlet.app
     protectWithOauthProxy: true
     tlsEnabled: true
   resources:
