@@ -1,0 +1,25 @@
+app: streamlit-app
+env: fleet-silence
+namespace: default
+chart:
+  name: https://github.com/gimlet-io/onechart.git?branch=simplified-schema&path=/charts/onechart/
+values:
+  containerPort: 8501
+  gitRepository: laszlocph/streamlit-app
+  gitSha: '{{ .SHA }}'
+  image:
+    dockerfile: Dockerfile
+    registry: customRegistry
+    repository: registry.gimlet:30003/laszlocphaqzepwhq/{{ .APP }}
+    strategy: dockerfile
+    tag: '{{ .SHA }}'
+  imagePullSecrets:
+    - '{{ .APP }}-customregistry-pullsecret'
+  ingress:
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt
+      kubernetes.io/ingress.class: nginx
+    host: laszlocph-streamlit-app-aqzepwhq.gimlet.app
+    tlsEnabled: true
+  resources:
+    ignoreLimits: true
