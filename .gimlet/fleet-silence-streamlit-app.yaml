@@ -19,7 +19,10 @@ values:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
       kubernetes.io/ingress.class: nginx
+      nginx.ingress.kubernetes.io/auth-signin: https://auth-aqzepwhq.gimlet.app/oauth2/start?rd=/redirect/$http_host$escaped_request_uri
+      nginx.ingress.kubernetes.io/auth-url: https://auth-aqzepwhq.gimlet.app/oauth2/auth
     host: laszlocph-streamlit-app-aqzepwhq.gimlet.app
+    protectWithOauthProxy: true
     tlsEnabled: true
   resources:
     ignoreLimits: true
