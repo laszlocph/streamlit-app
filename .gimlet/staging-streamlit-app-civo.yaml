@@ -19,7 +19,7 @@ values:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
       kubernetes.io/ingress.class: nginx
-    host: laszlocph-streamlit-appstaging.turbopizza.net
+    host: laszlocph-streamlit-app.staging.turbopizza.net
     tlsEnabled: true
   resources:
     ignoreLimits: true
