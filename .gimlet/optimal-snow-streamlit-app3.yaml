@@ -2,7 +2,7 @@ app: streamlit-app3
 env: optimal-snow
 namespace: default
 chart:
-  name: https://github.com/lalyos/chart-workshop.git?branch=master&path=/
+  name: https://github.com/gimlet-io/onechart.git?branch=simplified-schema&path=/charts/onechart/
 values:
   containerPort: 8501
   gitRepository: laszlocph/streamlit-app
