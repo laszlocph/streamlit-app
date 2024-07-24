@@ -19,7 +19,5 @@ values:
       kubernetes.io/ingress.class: nginx
     host: laszlocph-streamlit-app-43bb3842.alma.hu
     tlsEnabled: true
-  replicas: 1
   resources:
     ignoreLimits: true
-  vars: {}

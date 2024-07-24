@@ -1,5 +1,5 @@
-app: streamlit-app3
-env: optimal-snow
+app: streamlit-app-civo
+env: staging
 namespace: default
 chart:
   name: https://github.com/gimlet-io/onechart.git?branch=simplified-schema&path=/charts/onechart/
@@ -9,20 +9,17 @@ values:
   gitSha: '{{ .SHA }}'
   image:
     dockerfile: Dockerfile
-    registry: ghcrRegistry
-    repository: ghcr.io/laszlocph/{{ .APP }}
+    registry: containerizedRegistry
+    repository: 127.0.0.1:32447/{{ .APP }}
     strategy: dockerfile
     tag: '{{ .SHA }}'
   imagePullSecrets:
-    - '{{ .APP }}-ghcrregistry-pullsecret'
+    - '{{ .APP }}-containerizedregistry-pullsecret'
   ingress:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
       kubernetes.io/ingress.class: nginx
-      nginx.ingress.kubernetes.io/auth-signin: https://auth.alma.hu/oauth2/start?rd=/redirect/$http_host$escaped_request_uri
-      nginx.ingress.kubernetes.io/auth-url: https://auth.alma.hu/oauth2/auth
-    host: laszlocph-strea1mlit-app-d72c4d51.gimlet.app
-    protectWithOauthProxy: true
+    host: laszlocph-streamlit-app.staging.turbopizza.net
     tlsEnabled: true
   resources:
     ignoreLimits: true
