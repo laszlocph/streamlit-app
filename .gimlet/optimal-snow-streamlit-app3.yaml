@@ -9,8 +9,8 @@ values:
   gitSha: '{{ .SHA }}'
   image:
     dockerfile: Dockerfile
-    registry: ghcrRegistry
-    repository: ghcr.io/laszlocph/{{ .APP }}
+    registry: containerizedRegistry
+    repository: 127.0.0.1:32447/{{ .APP }}
     strategy: dockerfile
     tag: '{{ .SHA }}'
   imagePullSecrets:
