@@ -12,6 +12,8 @@ values:
   image:
     repository: 127.0.0.1:32447/streamlit-app
     tag: '{{ .SHA }}'
+    registry: dockerRegistry
+    strategy: buildpacks
   imagePullSecrets: []
   replicas: 1
   resources:
