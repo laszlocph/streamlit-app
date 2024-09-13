@@ -1,0 +1,21 @@
+app: streamlit-app2
+env: able-smoke
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.70.0
+values:
+  containerPort: 8501
+  gitRepository: laszlocph/streamlit-app
+  gitSha: '{{ .SHA }}'
+  image:
+    dockerfile: Dockerfile
+    registry: containerizedRegistry
+    repository: 127.0.0.1:32447/{{ .APP }}
+    strategy: dockerfile
+    tag: '{{ .SHA }}'
+  imagePullSecrets:
+    - '{{ .APP }}-containerizedregistry-pullsecret'
+  resources:
+    ignoreLimits: true
