@@ -6,12 +6,14 @@ chart:
   name: onechart
   version: 0.70.0
 values:
+  containerPort: 8501
   gitRepository: laszlocph/streamlit-app
   gitSha: '{{ .SHA }}'
   image:
+    dockerfile: Dockerfile
     registry: dockerRegistry
     repository: 127.0.0.1:32447/{{ .APP }}
-    strategy: buildpacks
+    strategy: dockerfile
     tag: '{{ .SHA }}'
   ingress:
     host: cdcdcd
