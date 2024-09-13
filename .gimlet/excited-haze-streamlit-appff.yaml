@@ -1,0 +1,19 @@
+app: streamlit-appff
+env: excited-haze
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.70.0
+values:
+  gitRepository: laszlocph/streamlit-app
+  gitSha: '{{ .SHA }}'
+  image:
+    registry: dockerRegistry
+    repository: 127.0.0.1:32447/{{ .APP }}
+    strategy: buildpacks
+    tag: '{{ .SHA }}'
+  ingress:
+    host: cdcdcd
+  resources:
+    ignoreLimits: true
