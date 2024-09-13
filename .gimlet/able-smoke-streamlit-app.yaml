@@ -11,9 +11,11 @@ values:
   gitSha: '{{ .SHA }}'
   image:
     dockerfile: Dockerfile
+    registry: containerizedRegistry
     repository: 127.0.0.1:32447/{{ .APP }}
+    strategy: dockerfile
     tag: '{{ .SHA }}'
-  imagePullSecrets: []
-  replicas: 1
+  imagePullSecrets:
+    - '{{ .APP }}-containerizedregistry-pullsecret'
   resources:
     ignoreLimits: true
