@@ -21,3 +21,11 @@ values:
     tlsEnabled: true
   resources:
     ignoreLimits: true
+manifests: |
+  ---
+  apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    name: test
+  data:
+    hello: "hi"
