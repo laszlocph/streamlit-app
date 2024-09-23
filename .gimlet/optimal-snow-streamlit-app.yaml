@@ -21,7 +21,7 @@ values:
     tlsEnabled: true
   resources:
     ignoreLimits: true
-manifests: |
+manifests: |-
   ---
   apiVersion: v1
   kind: ConfigMap
@@ -29,3 +29,7 @@ manifests: |
     name: test
   data:
     hello: "hi"
+
+  # database configuration (generated value, do not edit)
+  # {"redis":{"enabled":true,"encryptedPassword":"AgCzsA8Gq2oxcKZDyM/NugGO5ez6i7fv8guPV3O5jmqaMrBNRx6UtitGWTYN1hFgkUPwijbFfz1cKUuo4LJIAcCcMD9CQ6c6uwNwb6hM81xANsxstJtfoSVsxMV7ZBukim/MNi+NVd1RK57bR/kP2vFVpnspRpw3D75OugOTRgKvn3tdGrz+OFegVePO+9ltFFROgO/0uwjQrt2DYGz6QiVbG0cI9xkWPFjTFQnJDJi9ZuQsjw5twV1GWuco3Zfafd0zoecs5hdGbCNoQKoG2bE3PkeapggUf/3AKvF6yl2mVapTU48EZQWWlN9Sj712rXy32pwFm14Ck4AqXInPIGARg3ckjZXIgQxpxCzCFMvvrOdjjU9M2ESbcmnOB9/9B9Sl3jHFIQEEsNZTdCIZBqcFeamW+9E5xJdKQ7XyrATGXIMKAaT4dvSouuCPzknfdn6yjfBt7WGXKr6/d9XDjC9+sjLa8Opi9GxbigzXkQuZ3CPJ8g+eruZzZwcL+pJ+IR/9PWyURokqxCm/9jc5OFgsuQFHtDPaIjNKQ8ZwqUJQaedtkdWTmi5TbmuO+d4DRUN4hlDP+AlLSo+BMMGiWVg3mJYO5CUATEPfuasnSlnyIw5xuV2YBHSCAA9ZW8//hiAmCa//F3xVtTGINUs0phyCb3ujvsHCWl8Qd+mM452Je1ulHetul89WWttwG2qNzdAmMJiMOpQ="}}
+  # database configuration end
