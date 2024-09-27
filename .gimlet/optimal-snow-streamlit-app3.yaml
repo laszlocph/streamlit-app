@@ -26,3 +26,7 @@ values:
     tlsEnabled: true
   resources:
     ignoreLimits: true
+dependencies:
+  - name: streamlit-app3-postgresql
+    kind: plain
+    spec: null
