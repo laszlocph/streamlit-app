@@ -27,16 +27,6 @@ values:
   resources:
     ignoreLimits: true
 dependencies:
-  - name: streamlit-app3-postgresql
-    kind: plain
-    spec:
-      module:
-        url: https://github.com/gimlet-io/plain-modules.git?path=postgresql
-      values:
-        encryptedPassword: AgAz97XkNF/5RSg23WKKbhxIVpv7DTBPTvaEbb/pn7vr2S08dLsBt2IZgd9m/QIsFrQ6mXGRH7fXTXghKdwS/k0HVymt3+IBJrMIMhxQfAbZRNe+H5thT7dr5nTWNh6+U0a8sN5OX5JP0P08lL84GYeP8jpl35oRKLBK8JY4S+AF7CZLi400M8kBZEPhroucHO6nfYTtdzcVotRr6GuNR3FmNwz3/YLBn/ngsB0QsByfwfBVaQrhrSi48NQBcgsxJPzdtjtH0OMUlKya89pWTAAeITd6/SKQvssDBS2hZQLl1Ewgo5Xcxz1dFbxl97R3LaejJHMDqD+MJNLw4dT+UtsonFnbl02StbSEx7gXnaMknopTBdGyMXz9f+KiM6ML4tjVk3a1obSi9nIVlvcko7S0DWiNpj/ZNhJT91uwrPsQmo61rAxvTHpeEIGi8tGZNCD2lxo+U6RzELB6mvWdW0chkFBIc6GKvCWnrnmHGhtXOnzARBGJ+Sz3abJzfVopBuJLLtHCl4So35sT8GuD/jO4F0KnSs2GgIMz0BR1+wxRa75UB3jKgYbN1OeKfQqAnQjlQl/DVafI04dSuI6lcb0RIB2YRTsg9PrQg5z0jmpX5e9CrBBPsEC8Ty7KuZtG7uUvG00UFFDPs4r4ndhdabwtEw2UpfNdaYdOhv3H10y0ThVqIHqxHdrGLI9eVhCJFKmuWG2geg==
-        name: myapp
-        user: myapp
-      secret: ""
   - name: streamlit-app3-redis
     kind: plain
     spec:
