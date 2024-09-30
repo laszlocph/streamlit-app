@@ -14,7 +14,7 @@ values:
     strategy: dockerfile
     tag: '{{ .SHA }}'
   imagePullSecrets:
-    - '{{ .APP }}-ghcrregistry-pullsecret'
+    - '{{ .APP }}-containerizedregistry-pullsecret'
   ingress:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
@@ -26,6 +26,8 @@ values:
     tlsEnabled: true
   resources:
     ignoreLimits: true
+  vars:
+    TEST_VALUE: test
 dependencies:
   - name: streamlit-app3-redis
     kind: plain
