@@ -24,7 +24,7 @@ values:
     host: laszlocph-strea1mlit-app-d72c4d51.gimlet.app
     protectWithOauthProxy: true
     tlsEnabled: true
-  replicas: 4
+  replicas: 2
   resources:
     ignoreLimits: true
   vars:
