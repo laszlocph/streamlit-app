@@ -9,12 +9,10 @@ values:
   gitSha: '{{ .SHA }}'
   image:
     dockerfile: Dockerfile
-    registry: containerizedRegistry
+    registry: public
     repository: 127.0.0.1:32447/{{ .APP }}
     strategy: dockerfile
     tag: '{{ .SHA }}'
-  imagePullSecrets:
-    - '{{ .APP }}-containerizedregistry-pullsecret'
   ingress:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
