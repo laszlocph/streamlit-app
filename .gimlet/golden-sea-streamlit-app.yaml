@@ -9,7 +9,7 @@ values:
   gitRepository: laszlocph/streamlit-app
   gitSha: '{{ .SHA }}'
   image:
-    context: .
+    context: doesnotexist
     dockerfile: Dockerfile
     registry: customRegistry
     repository: registry.gimlet:30003/laszlocphwxffhlqr/{{ .APP }}
