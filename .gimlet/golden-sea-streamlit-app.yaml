@@ -11,12 +11,10 @@ values:
   image:
     context: doesnotexist
     dockerfile: Dockerfile
-    registry: customRegistry
+    registry: public
     repository: registry.gimlet:30003/laszlocphwxffhlqr/{{ .APP }}
     strategy: dockerfile
     tag: '{{ .SHA }}'
-  imagePullSecrets:
-    - '{{ .APP }}-customregistry-pullsecret'
   ingress:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
