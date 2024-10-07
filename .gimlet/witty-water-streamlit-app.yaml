@@ -24,5 +24,6 @@ values:
       kubernetes.io/ingress.class: nginx
     host: laszlocph-streamlit-app-tncjxsih.gimlet.app
     tlsEnabled: true
+  replicas: 2
   resources:
     ignoreLimits: true
