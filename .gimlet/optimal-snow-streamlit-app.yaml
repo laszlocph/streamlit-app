@@ -20,3 +20,12 @@ values:
     tlsEnabled: true
   resources:
     ignoreLimits: true
+dependencies:
+  - name: streamlit-app-redis
+    kind: plain
+    spec:
+      module:
+        url: https://github.com/gimlet-io/plain-modules.git?path=redis
+      values:
+        encryptedPassword: AgAhpAeGn49+TGHJvjop8J8rMBO8F2rfe6i87ESPRskCdB6+MrX9jbFWG+IjwIhIdHWQsjC/spNzPi/WVuOTwQUpZgUYmtoPzoo5SKKksSJCM7htM/tpJmnc/Ot1kxb8D7JIcGRQvOUh7NQY7sHr2Yk/j6dp0QUl3KgPBQ7tvgkQxDz5lCgEuvO559pGa3U7cKvS+mRDvkMUu/Mkax9/wIYhoS74Mc8r45+GGWBuqdcy+1LjAJUI7Hpat3o1dNm/iwbaHrM9uVLW4AwjOSHYwQ99bEz8yLoB5XZIaF3gDHhTYgkDETbq+0JUjYLIvB+X/zIsWUWvfdfMuz3v/PizojWmhk94T488MNiLBIJ07K5RPPq+fqbeK8Uy9xC+JUI4YkmGWvqIgScHG4r1ueL1qYRGDABr8NQF3eOgQVLzYryqcUE/vpEZ+QWZbzBFIKFfn6pDLEwVZiHacxk8L0T253FnhyfqEm/O7FYkwZL1plQ9/7o1ts6iRw/m9PxcWvbE42WAdTH106DN1OFVBu6pB0RpUjAg9JU20PyMukL8NY7u80i+jNmVg32/5IW40YajyB/BBNjXGvGik4RyUF0UZe4OrFYA8++szcr5xG9PJSRJqhET0zd/wj7i5tMSyKfvVZNnaRYjp1SFfllyVyZl6JHkJrTauFMeUm2SHbeuwTlQM0Tc87CS2IVPL+B7uegWNlmB/z/Q
+      secret: ""
