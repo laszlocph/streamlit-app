@@ -1,0 +1,28 @@
+app: streamlit-app
+env: learning-shape
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.70.0
+values:
+  containerPort: 8501
+  gitRepository: laszlocph/streamlit-app
+  gitSha: '{{ .SHA }}'
+  image:
+    context: .
+    dockerfile: Dockerfile
+    registry: customRegistry
+    repository: registry.gimlet:30003/laszlocphgzirkadm/{{ .APP }}
+    strategy: dockerfile
+    tag: '{{ .SHA }}'
+  imagePullSecrets:
+    - '{{ .APP }}-customregistry-pullsecret'
+  ingress:
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt
+      kubernetes.io/ingress.class: nginx
+    host: laszlocph-streamlit-app-gzirkadm.gimlet.app
+    tlsEnabled: true
+  resources:
+    ignoreLimits: true
