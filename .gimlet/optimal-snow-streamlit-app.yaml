@@ -29,3 +29,11 @@ dependencies:
     values:
       app: '{{ .APP }}'
       encryptedPassword: AgAI9U1Zq+mka+v4yiCtTGxLMTWfIJiqNp/3oqbi/LRsLkNZatQvTjAs59gSoSxYVdv75jrxXBh2WEfvUOEPvwlj/VhQuE99gTh7g+rffJj7xSuARfECxAnUUapECEhDdaICUbj5qS1El/bLA47pKr20IlyYaXsHLc5FgahTtUtEfM85o1aBBsBcFcVBrnHtG8Xzk9fOgCcK/CxKtuKlBD4IunlAR4K5fGuLn08GgHsGIdO1A+UWlGMh8g8ktM+jFLmoe1rTDuD2lCCyUpDFB11xrrBPsn7WTA9uD3+2KTNrOgrxUTVlaIcYXKLXEYnHz034jc+4xTtMGWh174z+Nzjji0Gl1+/u8BkvHNTwwTWpl5m5ZLWJidtWm3U3VeeGrGZB5g6QArSqY7Jtxqkpc7OlnsPy7fXO4a+Ua8Aij8vUgOd5GLEOlaN/ErwkPwEtRmajlqe2aZmOahP4tXobS+Qn3ymuw/eB4NGEKaW1p0qPnMZJQDBWyL4lbHFYW08KD1kJXY8GG0JYmYhBeIABFU1rtniYnzq8JFdmApAr+kVgmzWT7AHAZHCYCzCv/HVSbadc14CWyTDRmh1EaDKZvpF23wxUT74J0z9Rx0GskjqMUjWP/gea4/hs50/yCu9KpSHU2RX5/4WkNI0AJ3O9FehW89kZWu6PZ6SW7gvdB8ojYB8qVzEI86+NXgBP2JfExkjTPSEU
+  - name: streamlit-app-azuredb
+    chart:
+      repository: https://github.com/gimlet-io/charts.git?path=azure-database-for-postgresql-database
+      name: ""
+    values:
+      database: mydb
+      password: AgCUH5z6Cq5j1/824QCGhSepkOPHIBqA8IUWvYLHnXbJLnG7xfR8h/DXzhg+9JiATw16UgX2cSQevqkQ4W6Lox/LW+8sORrfI0KZ6OHCu46iXcpEVYGMx4Bj+3vvfYMjsagH24VsmdQHrUKaNM+U/wXQ/3qb6ycYGAPlyPNW+pTAbfEFAcKAYVShe9u3eoCpWz3Sb9CnkJZZfQqivDeJFBj58NBkp6ly6mpIeqskr1I2Crhc5/y78NaVsVEOGMGgvE/A3LxLLCah/6oJ64YsNchcD+KMs88jKFHPELH291nijtPltnWxOF0EPJnucZlCKHVJU80t7jhmDG3IawHmDUzN5YkZOMB4gQ0UoL71rXDDip0S5jPEpayvfN+lTLtmZQILApEd81FDP0pYHvOZMQyd62Iq28J9xCZiOY8uJJmroxC+gjqa/EqZ0Xj0baE89a/T+Y5wTq3+SevH4uOu8qv6MBn1+bF8tAGqVY4vYTPWMfnc7GoWbN8nLJJpX3prUrh73NxflOazv5E/Bzyo4x0AQcazdYiWEkdBNVFbXwx1tNxkPo821Q5raIGJzaw5dMt+XTOxWntokfpu44wpwpABxKWuSABC44lk/otYfNWS74ljlJFfvt6TLzXK1zjTSrM7Kcn1DXdaUwC4j5b7qSoz424RwdXXDS4TgFTc1MxR8C+qIhB9nc9Cv1eEnDYZRapWJK27
+      user: mydb
