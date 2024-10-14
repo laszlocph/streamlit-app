@@ -21,10 +21,3 @@ values:
   replicas: 2
   resources:
     ignoreLimits: true
-dependencies:
-  - name: streamlit-app-Redis
-    chart:
-      repository: https://github.com/gimlet-io/charts.git?path=tf-module
-      name: ""
-    values:
-      encryptedPassword: AgA+6T7a/QRzFQduIRB2Hc7ZpYwZ3DZwc+E4CTXUwydRNdIVIM+7E74S6wkqBorloLa2+lWS+bmqM5dDVPjdaPk/DB+OV8mIwsh4iAIM5aP3uLqrsGIWuOQZ1WmjRp6KqjVKuT2ObotRjpwqai1jNwcH6BIJ3nHhVC9g67kt3vdhXfFZIvc355+fNIQInbPIXczQJQ+HMPU/0kPd527GZ9d8jRFAI5ZuJ13HhKTBBCRQn4IKCtumA7hSCdv1oGd9SvD78AFz/eKGIZpKfhhtGwIHQ93DNROnc0E6JyMcqgX+mb/PHIXovOGjkKu1wqr5hOts3dABX0W9t/S0rhHaIIMRmxwyFMxJbcY8NLYRx2Jiqw0u1Pp8pmCABNb2UO9GkvXj14BNlTWhEpRZlhJW30WIyA2D1j6ZZlX5wd2bWFoP5dSzKUMmv1eyZWeInRSsABHGavsaUPqmFfiPNY+pGaFWJA36F3P8BoiE3zciwLz7xxN5JrVTZnvi9Mqer6RioqDU88ozCp9sw9l5NJ2HNRmT4W6eZqxeYOOoBCZ7gO9AQAzqgDRgcERyL/aqd1rSZERQxs4yoNCEJzIzugXIHCfT3kmzqosAwLIvsyy8JNEXLpdFbBDyRh7YUDJDpHH1Jhz97GK8X0/rKmQOfhGkNE2Acj/6XkG7RICbz9TzY2bCi+4TcxfB/uqtobxW6lwrG0IZTbrX
