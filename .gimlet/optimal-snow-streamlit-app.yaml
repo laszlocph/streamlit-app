@@ -21,3 +21,10 @@ values:
   replicas: 2
   resources:
     ignoreLimits: true
+dependencies:
+  - name: streamlit-app-redis
+    chart:
+      repository: https://github.com/gimlet-io/charts.git?path=containerized-redis
+      name: ""
+    values:
+      encryptedPassword: AgAI9U1Zq+mka+v4yiCtTGxLMTWfIJiqNp/3oqbi/LRsLkNZatQvTjAs59gSoSxYVdv75jrxXBh2WEfvUOEPvwlj/VhQuE99gTh7g+rffJj7xSuARfECxAnUUapECEhDdaICUbj5qS1El/bLA47pKr20IlyYaXsHLc5FgahTtUtEfM85o1aBBsBcFcVBrnHtG8Xzk9fOgCcK/CxKtuKlBD4IunlAR4K5fGuLn08GgHsGIdO1A+UWlGMh8g8ktM+jFLmoe1rTDuD2lCCyUpDFB11xrrBPsn7WTA9uD3+2KTNrOgrxUTVlaIcYXKLXEYnHz034jc+4xTtMGWh174z+Nzjji0Gl1+/u8BkvHNTwwTWpl5m5ZLWJidtWm3U3VeeGrGZB5g6QArSqY7Jtxqkpc7OlnsPy7fXO4a+Ua8Aij8vUgOd5GLEOlaN/ErwkPwEtRmajlqe2aZmOahP4tXobS+Qn3ymuw/eB4NGEKaW1p0qPnMZJQDBWyL4lbHFYW08KD1kJXY8GG0JYmYhBeIABFU1rtniYnzq8JFdmApAr+kVgmzWT7AHAZHCYCzCv/HVSbadc14CWyTDRmh1EaDKZvpF23wxUT74J0z9Rx0GskjqMUjWP/gea4/hs50/yCu9KpSHU2RX5/4WkNI0AJ3O9FehW89kZWu6PZ6SW7gvdB8ojYB8qVzEI86+NXgBP2JfExkjTPSEU
