@@ -21,13 +21,3 @@ values:
   replicas: 2
   resources:
     ignoreLimits: true
-dependencies:
-  - name: streamlit-app-postgresdb
-    chart:
-      repository: https://github.com/gimlet-io/charts.git?path=postgresql-database
-      name: ""
-    values:
-      app: '{{ .APP }}'
-      database: mydb
-      password: AgCpxnNUIfoVUVxQOqkwv8RdubTn5ISnhaXyT9eKplOq0fd2QOufAll1NRuEfTaxR3WB7Edl3pV8TG69iaB3nfZ8Cm+TSa7cNuBzTkfWhjBVafxGYlEJfvQki+MgtD1h6DQm02X3xhbjwQCvCEb2Dau5G1wh4n0o8ETdfCYmfPj+Wwribt2NBuFC3VgXXUh5ramLqT1Yk0dT0+bxYDKFajltmJP2Xq0Re14wM8mXb2zDGZqBR+GN1K72yKFpxI4uzYSiGgIM/buJF1SEOBmpQsdWfy8P3i3reJXXt0V1dbr3McuSLhq1AWvpBxu3h7EhIv+/Uzt8fRgJ/LAfbwj4uBmSDMBi731cAuxcmqwezyv6uHzIVjQceHE/YtcOYNdNUCIKTgtnTkW3zGF7rJh/VcZ7ih7r0+mfV6o9EJrQ/gOfpG2l24nVsiOqz6UCyx9KfVo61cViNXqbjPBmiRi5Q32afkoqa3LNMtq77uOSUygmKYCCfyJ3Z0j4g+hhwISrrnb5zrRxgyfcCMjnTwxevW66U55r22xDW7aj9XGp+YzcHARnHLf+z6NY0LnMCvJc30U+75QUuNFioPBWAtl7+tdSbWdcgUOLWvXylR7zYZdnU54HMiVatc7+XDlZvShErnITjR6XldEqxef3WLSFUNwYTbHpWtlSEJGWzMWnSPryeB3VjOIrt55c4hBcByluAXg/cfQT
-      username: mydb
