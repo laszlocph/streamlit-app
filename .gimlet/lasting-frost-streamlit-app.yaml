@@ -30,10 +30,9 @@ manifests: |
           name: postgres-test-bitnami
         interval: 10m
     values:
-      service:
-        annotations:
-          gimlet.io/git-repository: laszlocph/streamlit-app
-          gimlet.io/git-sha: "{{ .SHA }}"
+      commonAnnotations
+        gimlet.io/git-repository: laszlocph/streamlit-app
+        gimlet.io/git-sha: "{{ .SHA }}"
       auth:
         existingSecret: postgresql-credentials
       architecture: standalone
