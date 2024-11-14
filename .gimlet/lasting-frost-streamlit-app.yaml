@@ -30,7 +30,7 @@ manifests: |
           name: postgres-test-bitnami
         interval: 10m
     values:
-      commonAnnotations
+      commonAnnotations:
         gimlet.io/git-repository: laszlocph/streamlit-app
         gimlet.io/git-sha: '{{ .SHA }}'
       auth:
