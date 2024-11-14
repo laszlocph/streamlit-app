@@ -32,7 +32,7 @@ manifests: |
     values:
       commonAnnotations
         gimlet.io/git-repository: laszlocph/streamlit-app
-        gimlet.io/git-sha: "{{ .SHA }}"
+        gimlet.io/git-sha: '{{ .SHA }}'
       auth:
         existingSecret: postgresql-credentials
       architecture: standalone
