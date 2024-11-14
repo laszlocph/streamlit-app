@@ -1,6 +1,7 @@
 app: postgres-test
 env: lasting-frost
 namespace: default
+values: {}
 manifests: |
   ---
   apiVersion: source.toolkit.fluxcd.io/v1
