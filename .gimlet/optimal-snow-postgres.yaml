@@ -36,7 +36,7 @@ manifests: |
             gimlet.io/git-repository: laszlocph/streamlit-app
             gimlet.io/git-sha: '{{ .SHA }}'
       auth:
-        existingSecret: credentials
+        existingSecret: postgresql-credentials
       architecture: standalone
       tls:
         enabled: true
