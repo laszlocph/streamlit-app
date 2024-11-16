@@ -1,0 +1,22 @@
+app: streamlit-app7
+env: optimal-snow
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.70.0
+values:
+  gitRepository: laszlocph/streamlit-app
+  gitSha: '{{ .SHA }}'
+  image:
+    registry: public
+    strategy: static
+    tag: "1.27"
+  ingress:
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt
+      kubernetes.io/ingress.class: nginx
+    host: laszlocph-streamlit-app.alma.hu
+    tlsEnabled: true
+  resources:
+    ignoreLimits: true
