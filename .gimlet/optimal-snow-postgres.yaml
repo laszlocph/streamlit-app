@@ -30,9 +30,11 @@ manifests: |
         interval: 10m
     values:
       fullnameOverride: postgres
-      commonAnnotations:
-        gimlet.io/git-repository: laszlocph/streamlit-app
-        gimlet.io/git-sha: '{{ .SHA }}'
+      primary:
+        service:
+          annotations:
+            gimlet.io/git-repository: laszlocph/streamlit-app
+            gimlet.io/git-sha: '{{ .SHA }}'
       auth:
         existingSecret: credentials
       architecture: standalone
