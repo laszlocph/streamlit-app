@@ -53,7 +53,7 @@ manifests: |
   kind: Secret
   metadata:
     name: postgresql-credentials
-    namespace: infrastructure
+    namespace: default
   type: Opaque
   stringData:
     postgres-password: super-secret-password
