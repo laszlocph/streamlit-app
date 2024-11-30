@@ -29,7 +29,7 @@ manifests: |
           name: postgres
         interval: 10m
     values:
-      fullnameOverride: postgres
+      fullnameOverride: postgres1
       primary:
         service:
           annotations:
