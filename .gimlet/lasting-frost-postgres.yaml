@@ -61,3 +61,61 @@ manifests: |
       metadata:
         name: postgres
         namespace: default
+  ---
+  apiVersion: source.toolkit.fluxcd.io/v1
+  kind: HelmRepository
+  metadata:
+    name: runix
+    namespace: default
+  spec:
+    interval: 60m
+    url: https://helm.runix.net
+  ---
+  apiVersion: helm.toolkit.fluxcd.io/v2
+  kind: HelmRelease
+  metadata:
+    name: pgadmin
+    namespace: default
+  spec:
+    interval: 360m
+    releaseName: pgadmin
+    chart:
+      spec:
+        chart: pgadmin4
+        version: 1.31.0
+        sourceRef:
+          kind: HelmRepository
+          name: runix
+        interval: 60m
+    values:
+      existingSecret: credentials
+      secretKeys:
+        pgadminPasswordKey: pgadmin-password
+      service:
+        annotations:
+          gimlet.io/git-repository: laszlocph/adapticc
+          gimlet.io/git-sha: '{{ .SHA }}'
+  ---
+  apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    name: pgadmin
+    namespace: default
+    annotations:
+      kubernetes.io/ingress.class: nginx
+  spec:
+    tls:
+      - hosts:
+          - "pgadmin-eyujopnt.gimlet.app"
+        secretName: tls-pgadmin
+    rules:
+      - host: "pgadmin-eyujopnt.gimlet.app"
+        http:
+          paths:
+            - path: "/"
+              pathType: "Prefix"
+              backend:
+                service:
+                  name: pgadmin-pgadmin4
+                  port:
+                    number: 80
