@@ -88,7 +88,7 @@ manifests: |
           name: runix
         interval: 60m
     values:
-      existingSecret: credentials
+      existingSecret: postgres
       secretKeys:
         pgadminPasswordKey: pgadmin-password
       service:
