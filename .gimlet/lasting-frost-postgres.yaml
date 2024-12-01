@@ -94,8 +94,9 @@ manifests: |
         pgadminPasswordKey: pgadmin-password
       service:
         annotations:
-          gimlet.io/git-repository: laszlocph/adapticc
+          gimlet.io/git-repository: laszlocph/streamlit-app
           gimlet.io/git-sha: '{{ .SHA }}'
+          gimlet.io/app: postgres
   ---
   apiVersion: networking.k8s.io/v1
   kind: Ingress
